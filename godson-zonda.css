@@ -1,0 +1,120 @@
+.container{
+    margin: 10px;
+    padding: 50px;
+    border: 0px;
+    background-color: rgb(252, 252, 252);
+    height: fit-content;
+    border-style: solid;
+    display: flex;
+    gap: 200px;
+    font-family: sans-serif;
+    box-shadow: -5px 5px 40px 5px rgb(77, 76, 76);
+    border-radius: 10px;
+}
+
+
+.side-bar{
+    margin-left: -30px;
+    text-align: justify;
+    padding-top: -2px;
+    padding-bottom: 2px;
+    margin-top: -40px;
+    margin-bottom: -100px;
+}
+
+
+p1{
+    display: flex;
+    margin: 30px 2px;
+    /* white-space: nowrap; */
+    /* justify-content: space-between; */
+    justify-content: left;
+}
+
+.main-bar{
+    display: flex;
+    justify-content: space-around;
+    gap: 70px;
+    border: 1px solid;
+    margin-top: -50px;
+    margin-bottom: -50px;
+    margin-left: -60px;
+    padding-left: 20px;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 0;
+}
+
+
+.main-bar .title{
+    color: black;
+    /* text-decoration: underline; */
+    font-size: large;
+}
+
+
+.link{
+    text-decoration: none;
+    color: rgb(60, 60, 60);
+}
+
+
+.link:hover{
+    color: black;
+}
+
+
+.title:hover{
+    color: orange;
+}
+
+
+.side-bar .link:hover{
+    color: orange;
+}
+
+
+hr{
+    display: flex;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+
+
+
+
+/* building mobile responsiveness */
+/* @media(max-width: 360px){
+
+    .container{
+        margin: auto;
+        font-size: small;
+        display: grid;
+    }
+
+    .main-bar{
+        display: grid;
+        font-size: small;
+    }
+
+}
+
+
+@media(max-width: 768px){
+    .container{
+        margin: auto;
+        font-size: larger;
+        display: grid;
+    }
+
+    .main-bar{
+        display: grid;
+        font-size: larger;
+    }
+
+    p1{
+        justify-content: center;
+    }
+} */

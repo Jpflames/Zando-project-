@@ -1,0 +1,19 @@
+*{
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0%;
+    color: black;
+}
+h2{
+    text-transform: capitalize;
+}
+.sandal-main{
+    display:flex;
+    margin: 30px;
+    justify-content:space-evenly;
+
+}
+ul li {
+    padding: 5px;
+    font-size: larger;
+}

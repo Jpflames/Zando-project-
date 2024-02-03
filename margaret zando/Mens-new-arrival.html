@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4e4113349d.js" crossorigin="anonymous"></script>
+    <!-- Internal css -->
+    <style>
+        /* google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+        * {
+            font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+        }
+
+          /* customizing my background colour */
+          .bg-custom-gray-medium {
+            background-color: #e0e0e0; /* Light gray */
+        }
+
+        /* styling my hover for the sort by */
+        .hover:hover{
+            color: #F68B1E;
+        }
+
+        .custom-search {
+        border-radius: 10px; /* Adjust the border radius as needed */
+        width: 50px; /* Adjust the width as needed */
+        }
+
+       /* customizing the short horizontal line with 2 circles at the ends */
+        .custom-line {
+             height: 4px;
+            background-color: orange;
+            position: relative;
+        }
+
+        .custom-line::before,
+        .custom-line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background-color: orange;
+            border-radius: 50%;
+        }
+
+        .custom-line::before {
+            left: -10px;
+        }
+
+        .custom-line::after {
+            right: -10px;
+        }
+
+        /* Custom hover effect */
+       .hover-scale:hover {
+        transform: scale(1.009); /* Adjust the scale/increase in size as needed */
+            transition: transform 0.5s ease-in-out; /* Adjust the transition speed */
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the box shadow color and intensity */
+        }
+
+        /* my notes to remember
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            This property adds a shadow effect to the element.
+            0 sets the horizontal offset of the shadow to 0 pixels.
+            2px sets the vertical offset of the shadow to 2 pixels.
+            4px sets the blur radius of the shadow to 4 pixels.
+            rgba(0, 0, 0, 0.2) defines the color and transparency of the shadow. Here,
+            it's a slightly transparent black color (rgba(0, 0, 0)) with an alpha value of 0.2,
+            making it partially transparent. */
+
+
+            /* styling the stars */
+            .star-rating {
+            font-size: 18px; /* Adjust size as needed */
+            }
+
+            .star {
+            color: #ddd; /* Default star color */
+            }
+
+            .star.filled {
+            color: #F68B1E; /* Filled star color */
+            }
+
+            /* rating number on the stars */
+            .rating-number {
+                font-size: 14px; /* Adjustment of  size as needed */
+                color: #333; /* Text color */
+                margin-left: 5px; /* Adjustment of spacing */
+                }
+
+
+
+        /* Designing add to cart hover */
+            /* Custom hover effect */
+            .hover-scale:hover {
+                transform: scale(1.001); /* Adjust the scale/increase in size as needed */
+                transition: transform 0.8s ease-in-out; /* Adjust the transition speed */
+                box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the box shadow color and intensity */
+                padding-bottom: 40px;
+            }
+
+
+            /* Add to Cart button styling */
+            .add-to-cart-btn {
+                display: none; /* Initially hidden */
+            }
+
+            /* Display the button when the product card is hovered */
+            .hover-scale:hover .add-to-cart-btn {
+                display: block;
+                position: absolute;
+                height: 45px; /*moves the add to cart button*/
+                bottom: 0px; /* Add margin to the bottom */
+                left: 0;
+                width: 100%; /**moves the add to cart button*/
+                padding: 3px; /* Larger padding of the cart button*/
+                color: #fff; /* White text color */
+                text-align: center;
+                border-radius: 10px; /* Add border radius */
+            }
+
+            /* Margin between Zando Express and Add to Cart button */
+            .hover-scale:hover .zando-express {
+                margin-bottom: 50px;
+            }
+
+    </style>
+</head>
+<body>
+    
+    <div class="container bg-custom-gray-medium my-4 py-3">
+
+        <div class="row">
+
+            <!-- First Column -->
+            <div class="col-md-3 bg-white ms-5 me-2">
+                <!-- Tall container -->
+                <div class="short-container">
+                    <h4 class="mt-2 mb-2" style="font-weight: bold; font-size: 14px;">BRAND</h4>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="search" class="form-control custom-search" placeholder="Search">
+                        <!-- rounded-pill -->
+
+                        <!-- my notes
+                        form-control class is used to style form elements like <input>, <select>, 
+                        and <textarea> to have consistent appearance and behavior across different browsers and devices.
+                        When you apply the form-control class to an input element, it adjusts the width, height, font size, padding,
+                        and other styling properties to make the form element look visually consistent and user-friendly. -->
+                    </div>
+                </div>
+  
+                <!-- Styling the checkbox1 -->
+                <div class="row">
+                    <div class="col pb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="adidas">
+                            <label class="form-check-label" for="adidas">Adidas</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="africa-fashion-house">
+                            <label class="form-check-label" for="africa-fashion-house">Africa Fashion House</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="always-summer">
+                            <label class="form-check-label" for="always-summer">Always Summer</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="angelino">
+                            <label class="form-check-label" for="angelino">Angelino</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="arnete">
+                            <label class="form-check-label" for="arnete">Arnette</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- styling the colour and checkbox2 -->
+                <h4 class="mt-2 mb-2" style="font-weight: bold; font-size: 14px;">COLOR</h4>
+
+                <div class="row">
+                    <div class="col pb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="beige">
+                            <label class="form-check-label" for="">Beige</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="black">
+                            <label class="form-check-label" for="black">Black</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="blue">
+                            <label class="form-check-label" for="">Blue</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="brown">
+                            <label class="form-check-label" for="">Brown</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gold">
+                            <label class="form-check-label" for="">Gold</label>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- styling the 3rd segment of the small div -->
+                <div class="small d-flex justify-content-between align-items-center">
+                    <h2>
+                        <span class="joy ms-2" style="font-size: 14px; font-weight: bold;">PRICE (R)
+                    </h2>
+    
+                    <h2 class="mt-3" style="font-size: 14px; cursor: pointer;color: #F68B1E; font-weight: bold;">APPLY</h2>
+                </div>
+
+                <!-- Designing the horizontal line -->
+                <div class="container mb-4">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <div class="custom-line"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Designing the maximum and minimum range -->
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        <input type="number" id="minValue" name="minValue" min="0" value="Min" class="form-control"
+                         style="width: 80px;" placeholder="Min">
+                    </div>
+
+                    <div class="col-auto">-</div>
+
+                    <div class="col">
+                        <input type="number" id="maxValue" name="maxValue" min="0" value="Max" 
+                            class="form-control" style="width: 80px;" placeholder="Max">
+                    </div>
+                </div>
+
+                
+
+                <!-- Designing the discount percentage div -->
+                <div class="small d-flex justify-content-between align-items-center">
+                    <h2>
+                        <span class="joy ms-2" style="font-size: 14px; font-weight: bold;">DISCOUNT PERCENTAGE
+                    </h2>
+    
+                    <h2 class="mt-3" style="font-size: 14px; cursor: pointer;color: #F68B1E; font-weight: bold;">RESET</h2>
+                </div>
+
+                <!-- The percentage design with radio input -->
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="percentage" id="80percent">
+                    <label class="form-check-label" for="80percent">
+                        80% or more
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="percentage" id="70percent">
+                    <label class="form-check-label" for="70percent">
+                        70% or more
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="percentage" id="50percent">
+                    <label class="form-check-label" for="50percent">
+                        50% or more
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="percentage" id="20percent">
+                    <label class="form-check-label" for="20percent">
+                        20% or more
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="percentage" id="10percent">
+                    <label class="form-check-label" for="10percent">
+                        10% or more
+                    </label>
+                </div>
+                
+
+                
+                <!-- Designing gender checkbox -->
+                <h4 class="mt-3 mb- 1" style="font-weight: bold; font-size: 14px;">GENDER</h4>
+
+                <!-- Styling Gender checkbox -->
+                <div class="row">
+                    <div class="col pb-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="female">
+                            <label class="form-check-label" for="">Female</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="male">
+                            <label class="form-check-label" for="">Male</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="men">
+                            <label class="form-check-label" for="">Men</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="unisex">
+                            <label class="form-check-label" for="">Unisex</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                  
+                <!-- Designing size and its checkbox -->
+                <h4 class="mt-2 mb-2" style="font-weight: bold; font-size: 14px;">SIZE</h4>
+
+                <!-- size checkbox -->
+                <div class="row">
+                    <div class="col pb-2" style="height: 150px; overflow-y: auto;">
+
+                        <!-- my note
+                        overflow-y: auto; applies a vertical scrollbar to the container when its content
+                         exceeds the specified height. If there is no overflow, no scrollbar will appear.
+                         This ensures that the container remains visually consistent regardless of the content size. -->
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="s">
+                            <label class="form-check-label" for="">S</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="m">
+                            <label class="form-check-label" for="">M</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="l">
+                            <label class="form-check-label" for="">L</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="xl">
+                            <label class="form-check-label" for="">XL</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="xxl">
+                            <label class="form-check-label" for="">XXL</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="36w x 32l">
+                            <label class="form-check-label" for="">36W X 32L</label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="uk 32">
+                            <label class="form-check-label" for="">UK 32</label>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- short box closing div -->
+            </div>
+            
+
+            
+            <!-- Second Column -->
+            <div class="col-md-8 bg-white me-4 ms-2">
+                <!-- Short container -->
+                <div class="tall-container">
+                    <div class="small d-flex justify-content-between align-items-center">
+                        <h2>
+                            <span class="joy ms-2" style="font-size: 18px; font-weight: bold;">Men New Arrivals
+                        </h2>
+        
+                        <h2 class="hover mt-3" style="font-size: 16px; cursor: pointer;">Sort by: Newest Arrivals 
+                              <i class="fa-solid fa-chevron-down"></i>
+                        
+                        </h2>
+                    </div>
+                </div>
+
+                  <!-- Styling the 9 products found -->
+                <div class="tall-container">
+                    <div class="small d-flex justify-content-between align-items-center">
+                        <h2>
+                            <span class="joy ms-2" style="font-size: 13px; font-weight: bold; opacity: 0.5;">9 products found
+                        </h2>
+    
+                        <h2 class="hover mt-3 me-3" style="font-size: 15px; cursor: pointer;">
+                           <span class="me-3"> <i class="fa-solid fa-list"></i></span>
+                            <span><i class="fa-solid fa-table-cells-large" style="color: #F68B1E;"></i></span>
+                    
+                         </h2>
+                    </div>
+
+                </div>
+
+
+                <!-- styling the first picture div -->
+                <div class="row mt-2">
+
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1" style="font-size: 14px;">
+                            Fashion Clothing Mens Elastic Pocket Cargo Shorts Grey
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 180</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 800</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -78%
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- styling the stars -->
+                        <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="rating-number">(1)</span>
+                        </div>
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+
+                    <!-- styling the second picture of the 1st div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/1st picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            Fashion Clothing Men's Elastic Cargo Pants Shorts Nicker Joggers Beach Wear- Navyblue
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 120</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 800</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -85%
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- styling the stars -->
+                        <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="rating-number">(1)</span>
+                        </div>
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                    
+    
+                    <!-- styling the 3rd picture of the first div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/1st picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            Fashion Clothing Men's Elastic Cargo Pants Shorts Nicker Joggers Beach Wear- Black
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 120</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 800</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -85%
+                                </div>
+
+                            </div>
+                        </div>
+
+                    
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                   
+    
+                    <!-- styling the 4th image of the first div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/1st picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            Fashion Clothing Mens Elastic Pocket Cargo Shorts Grey
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 180</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 800</div>
+                                
+                                <!-- Discount badge 4-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -78%
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- styling the stars -->
+                        <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="rating-number">(2)</span>
+                        </div>
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+    
+                </div>
+                <!-- first div ends here -->
+
+
+
+                <!-- Styling the 2nd div and its contents -->
+                <div class="row mt-5">
+
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/2nd picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            ashion Clothing Mens Casual Cargo Pants Combat Joggers Sweatpants Jean Trousers Chinos
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 240</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 800</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -70%
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- styling the stars -->
+                        <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="rating-number">(1)</span>
+                        </div>
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+
+                    <!-- styling the second picture of the 2nd div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/2nd picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1" style="font-size: 12px;">
+                            Crosshatch Kinistion CRS55 Skinny Ripped Jeans Dark Wash
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 109</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 549</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -80%
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- styling the stars -->
+                        <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="rating-number">(6)</span>
+                        </div>
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                    
+    
+                    <!-- styling the 3rd picture of the first div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/2nd picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1" style="font-size: 14px;">
+                            Granadilla Surfers Original Swimshort Navy
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 149</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 740</div>
+                                
+                                <!-- Discount badge 1-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -80%
+                                </div>
+
+                            </div>
+                        </div>
+
+                         <!-- styling the stars -->
+                         <div class="star-rating">
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="star filled">&#9733;</span>
+                            <span class="rating-number">(2)</span>
+                        </div>
+
+                    
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+                   
+    
+                    <!-- styling the 4th image of the first div -->
+                    <div class="col col-md-3 hover-scale position-relative" style="cursor: pointer;">
+                        <img src="image2/2nd picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            Jeep Classic Elasticated Swimshorts Blue
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 119</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 399</div>
+                                
+                                <!-- Discount badge 4-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -70%
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+
+
+                    <!-- styling the 5th picture of the 2nd div -->
+                    <div class="col col-md-3 hover-scale position-relative mt-5" style="cursor: pointer;">
+                        <img src="image2/2nd picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                        
+                        <!-- Product information -->
+                        <div class="text-start name mt-1 text-truncate" style="font-size: 14px;">
+                            non-european Skinny Trouser Black
+                        </div>
+                    
+                        <!-- Price information -->
+                        <div class="price" style="font-size: 13px;">
+                            <div class="d-flex align-items-center">
+                                <div class="text-start discounted-price" style="font-weight: bold;">R 405</div>
+                                <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7; margin-left: 5px;">R 1350</div>
+                                
+                                <!-- Discount badge 4-->
+                                 <div class="discount-badge" style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px; border-radius: 0.25rem; margin-left: 5px;">
+                                    -70%
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <!-- Designing the zando Epress  -->
+                        <div class="d-flex align-items-center">
+                            <span style="font-size: 12px;" class="me-1">Zando  <i class=" fa-solid fa-rocket" style="color: #FF5722;"></i> </span>
+                            <span style="font-size: 12px; color: #F68B1E; font-weight: bold;">Express</span>
+                        </div> 
+
+                        <!-- Add to Cart button -->
+                        <div class="add-to-cart-btn">
+                            <button class="btn btn-warning text-white">Add to Cart</button>
+                        </div>
+
+                    </div>
+    
+                </div>
+
+            </div>
+
+                <!-- closing div of second column -->
+            </div>
+
+            <!-- ending div of row -->
+        </div>
+    
+        <!-- ending div of container-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

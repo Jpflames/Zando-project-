@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- google font -->
+    <script src="https://kit.fontawesome.com/4e4113349d.js" crossorigin="anonymous"></script>
+    <!-- Internal css -->
+    <style>
+        /* google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+        * {
+            font-family: 'Rubik', sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  
+        }
+
+
+        /* customizing my background colour */
+        .bg-custom-gray-medium {
+            background-color: #e0e0e0; /* Light gray */
+        }
+       
+
+       /* Custom hover effect */
+       .hover-scale:hover {
+        transform: scale(1.009); /* Adjust the scale/increase in size as needed */
+            transition: transform 0.5s ease-in-out; /* Adjust the transition speed */
+            box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.2); /* Adjust the box shadow color and intensity */
+        }
+
+        /* my notes to remember
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            This property adds a shadow effect to the element.
+            0 sets the horizontal offset of the shadow to 0 pixels.
+            2px sets the vertical offset of the shadow to 2 pixels.
+            4px sets the blur radius of the shadow to 4 pixels.
+            rgba(0, 0, 0, 0.2) defines the color and transparency of the shadow. Here,
+            it's a slightly transparent black color (rgba(0, 0, 0)) with an alpha value of 0.2,
+            making it partially transparent. */
+
+    
+    </style>
+</head>
+<body>
+    <div class="container bg-custom-gray-medium my-2 p-5" >
+        
+        <!-- designing the new arrival div -->
+        <div class="rounded-2 bg-white text-center p-2 my-2">
+            <div class="row">
+                <div class="col col-md-12">
+                    <img src="images/my first picture.jpg" alt="" width="99.8%" height="99.8%" class="rounded-2 img-fluid hover-scale">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- designing 2nd div -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-8 mx-2">
+
+                <!-- inserting the left icon -->
+                <div class="col-auto position-relative">
+                    <span class="position-absolute top-50 translate-middle-y start-0">
+                        <i class="fa-solid fa-circle-chevron-left fa-xl" style="color: #808080;"></i>
+                    </span>
+                </div>
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2"> 
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Women</p></span>
+                </div>
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Men</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Girls</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Boys</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Baby</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Sports</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture7.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Homeware</p></span>
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture8.jpg" alt="" width="" height="" class="rounded-2 img-fluid mb-2">
+                    <br>
+                    <span><p style="font-size: 13px; font-family: -apple-system, BlinkMacSystemFont;">Accessories</p></span>
+                </div>
+
+                <!-- Right icon -->
+                <div class="col-auto position-relative">
+                    <span class="position-absolute top-50 translate-middle-y end-0">
+                        <i class="fa-solid fa-circle-chevron-right fa-xl" style="color: #808080;"></i>
+                    </span>
+                </div>
+
+                <!-- Bootstrap classes col-auto are used to make the columns automatically adjust their width based on content.
+                position-relative class is used to establish positioning context for the icons.
+                position-absolute class is used for absolute positioning of the icons.
+                top-50, start-0, and end-0 classes are used to position the icons vertically centered and aligned to the left or right edge of their respective containers.
+                translate-middle-y class is used to vertically center the icons within their containers.     -->
+
+            </div>
+
+        </div>
+
+
+
+        <!-- designing the 3rd div -->
+        
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-8 mx-3">
+
+                <!-- inserting the left icon -->
+                <div class="col-auto position-relative">
+                    <span class="position-absolute top-50 translate-middle-y start-0">
+                        <i class="fa-solid fa-circle-chevron-left fa-xl" style="color: #808080;"></i>
+                    </span>
+                </div>
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+                    <br>
+            
+                </div>
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my second-picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture7.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my third-picture8.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    <br>
+                    
+                </div>
+
+                <!-- Right icon -->
+                <div class="col-auto position-relative">
+                    <span class="position-absolute top-50 translate-middle-y end-0">
+                        <i class="fa-solid fa-circle-chevron-right fa-xl" style="color: #808080;"></i>
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- designing the 4th div (women's new arrival) -->
+        <div class="rounded-2 bg-white text-center p-2 my-2" style="cursor: pointer;">
+            <div class="row">
+                <div class="col col-md-12">
+                    <img src="images/my fourth picture.jpg" alt="" width="99.8%" height="99.8%" class="rounded-2 img-fluid hover-scale">
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- Designing my 5th div -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-6">
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+                </div>
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/my fifth-picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+            </div>
+
+        </div>
+        
+
+    
+        <!-- Designing my 6th div (women's collection)-->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <!-- Styling the internal h2 -->
+            <div class="small d-flex justify-content-between align-items-center">
+                <h2>
+                    <span class="joy ms-2" style="font-size: 18px; font-weight: bold;">Women's New Arrivals
+                    <strong style="font-size: 25px; font-weight: lighter;">I</strong> </span>
+                    <span style="font-size: 19px;">Shop Now</span>
+                </h2>
+
+                <h2 style="font-size: 16px; color: orange; cursor: pointer;">SEE ALL
+                    <span>
+                        <i class="fa-solid fa-chevron-right me-3" style="color: orange;"></i>
+                    </span>
+                </h2>
+            </div>
+
+            <div class="row mt-2">
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+                    <!-- Discount badge 1-->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem; font-size: 12px;
+                         border-radius: 0.25rem;">
+                         -43%
+                    </div>
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Cotton On Curve Noah Woven Mini Shirt Dress Blue Stripe
+                    </div>
+
+                     <!-- Price information -->
+                     <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 339</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 599</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge2 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -24%
+                    </div>
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Sissy Boy Metallic Mayhem : Metallic Crossbody
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 759</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 999</div>
+                    </div>
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                
+                    <!-- Discount badge3 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -45%
+                    </div>
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        <!-- adding unicode to get the circled R -->
+                        Levi's&#xAE; Levis 501 Straight Leg Core Denim Medium Indigo Wash
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 599</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 1,099</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge4 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -40%
+                    </div>
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Miss Black Moniker 2 Wedge Tan
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 419</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 699</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+
+                     <!-- Discount badge5 -->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                     style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                     border-radius: 0.25rem; font-size: 13px;">
+                     -15%
+                    </div>
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        TTP Fashion Platform Low-Top Sneaker XB8601-White
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 373</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 439</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/6th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                     <!-- Discount badge6 -->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                     style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                     border-radius: 0.25rem; font-size: 13px;">
+                     -5%
+                    </div>
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        New Feeling Women Trendy High Waist Side Button Stretchy Denim Skirt
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;"> R 399</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 420</div>
+                    </div>
+
+    
+                </div>
+
+            </div>
+
+        </div>
+
+        
+        <!-- Designing my 7th div(men's new arrival) -->
+        <div class="rounded-2 bg-white text-center p-2 my-2" style="cursor: pointer;">
+            <div class="row">
+                <div class="col col-md-12">
+                    <img src="images/7th picture.jpg" alt="" width="99.8%" height="99.8%" class="rounded-2 img-fluid hover-scale">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Designing the 8th div -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-6">
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+                </div>
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/8th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Designing my 9th div (men's collection) -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <!-- Styling the internal h2 -->
+            <div class="small d-flex justify-content-between align-items-center">
+                <h2>
+                    <span class="joy ms-2" style="font-size: 18px; font-weight: bold;">Men's New Arrivals
+                    <strong style="font-size: 25px; font-weight: lighter;">I</strong> </span>
+                    <span style="font-size: 19px;">Shop Now</span>
+                </h2>
+
+                <h2 style="font-size: 16px; color: orange; cursor: pointer;">SEE ALL
+                    <span>
+                        <i class="fa-solid fa-chevron-right me-3" style="color: orange;"></i>
+                    </span>
+                </h2>
+            </div>
+
+            <!-- the pictures in rows and columns -->
+            <div class="row mt-2">
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Burberry BE4403 Brown Sunglasses
+                    </div>
+
+                     <!-- Price information -->
+                    <div class="text-start discounted-price" style="font-weight: bold;">R 3570</div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th pictrue2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge2 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -15%
+                    </div>
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Brave Soul Web Slip On Grey
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 639</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 749</div>
+                    </div>
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+            
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Authority Wear Classic T-shirt - Orange
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 249</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge4 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -18%
+                    </div>
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        <!-- adding unicode to get the circled R -->
+                        Levi's&#xAE Xx Chino Std Iii Za Navy Blazer Shady Ccu
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 899</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 1,099</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        M.A.D.D APPAREL Vintage Baseball Denim College Overcoat - Brown &amp; Green
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 1850</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/9th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                     <!-- Discount badge6 -->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                     style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                     border-radius: 0.25rem; font-size: 13px;">
+                     -35%
+                    </div>
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Nike Men's Air Max SYSTM Sneaker Blue-White
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 1,299</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 1,999</div>
+                    </div>
+
+    
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Designing my 10th div (kid's new arrival) -->
+        <div class="rounded-2 bg-white text-center p-2 my-2" style="cursor: pointer;">
+            <div class="row">
+                <div class="col col-md-12">
+                    <img src="images/10th picture.jpg" alt="" width="99.8%" height="99.8%" class="rounded-2 img-fluid hover-scale">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Designing the 11th div -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-6">
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+                </div>
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Designing my 12th div (kids's collection) -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <!-- Styling the internal h2 -->
+            <div class="small d-flex justify-content-between align-items-center">
+                <h2>
+                    <span class="joy ms-2" style="font-size: 18px; font-weight: bold;">Kid's New Arrivals
+                    <strong style="font-size: 25px; font-weight: lighter;">I</strong> </span>
+                    <span style="font-size: 19px;">Shop Now</span>
+                </h2>
+
+                <h2 style="font-size: 16px; color: orange; cursor: pointer;">SEE ALL
+                    <span>
+                        <i class="fa-solid fa-chevron-right me-3" style="color: orange;"></i>
+                    </span>
+                </h2>
+            </div>
+
+            <!-- the pictures in rows and columns -->
+            <div class="row mt-2">
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Pick n Pay Real Ob Foil Tee Black
+                    </div>
+
+                     <!-- Price information -->
+                    <div class="text-start discounted-price" style="font-weight: bold;">R 120</div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge2 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -32%
+                    </div>
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Pick n Pay Real Ob Foil Tee Black
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 239</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 349</div>
+                    </div>
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+            
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                       Just Jump Girls One Piece Peplum Skirt Swimsuit Daisies
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 450</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                    <!-- Discount badge4 -->
+                    <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                         style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                         border-radius: 0.25rem; font-size: 13px;">
+                      -32%
+                    </div>
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Vans Girls Sunflower Animal Box Crew Tee Ochre
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 189</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 279</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                     <!-- Discount badge5 -->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                     style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                     border-radius: 0.25rem; font-size: 13px;">
+                     -35%
+                    </div>
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Pick n Pay YG Printed Full Legging Purple
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 39</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 60</div>
+                    </div>
+
+    
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/12th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                     <!-- Discount badge6 -->
+                     <div class="position-absolute top-0 end-0 me-3 mt-2" 
+                     style="background-color: #FEF3E9; color: #F68B1E; padding: 0.25rem 0.5rem;
+                     border-radius: 0.25rem; font-size: 13px;">
+                     -36%
+                    </div>
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Vans Girls SK8-Mid Reissue Sneaker Pastel Mono Rose Smoke
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 579</div>
+                        <div class="text-start original-price text-decoration-line-through" style="opacity: 0.7;">R 899</div>
+                    </div>
+
+    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Designing my 13th div (homesware new arrivals) -->
+        
+         <div class="rounded-2 bg-white text-center p-2 my-2" style="cursor: pointer;">
+            <div class="row">
+                <div class="col col-md-12">
+                    <img src="images/13th picture.jpg" alt="" width="99.8%" height="99.8%" class="rounded-2 img-fluid hover-scale">
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Designing the 14th div -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <div class="row row-cols-6">
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/14th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+                </div>
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/11th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/14th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                   
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/14th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col  hover-scale" style="cursor: pointer;">
+                    <img src="images/14th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+
+                <div class="col hover-scale" style="cursor: pointer;">
+                    <img src="images/14th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Designing my 15th div (kids's collection) -->
+        <div class="rounded-1 bg-white text-dark text-center my-3 p-2">
+            <!-- Styling the internal h2 -->
+            <div class="small d-flex justify-content-between align-items-center">
+                <h2>
+                    <span class="joy ms-2" style="font-size: 18px; font-weight: bold;">Homeware New Arrivals
+                    <strong style="font-size: 25px; font-weight: lighter;">I</strong> </span>
+                    <span style="font-size: 19px;">Shop Now</span>
+                </h2>
+
+                <h2 style="font-size: 16px; color: orange; cursor: pointer;">SEE ALL
+                    <span>
+                        <i class="fa-solid fa-chevron-right me-3" style="color: orange;"></i>
+                    </span>
+                </h2>
+            </div>
+
+            <!-- the pictures in rows and columns -->
+            <div class="row mt-2">
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture1.jpg" alt="" width="" height="" class="rounded-2 img-fluid"> 
+            
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Pierre Cardin Linen Memory Foam Bathmat - Natural
+                    </div>
+
+                     <!-- Price information -->
+                    <div class="text-start discounted-price" style="font-weight: bold;">R 159</div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture2.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        World of Decor Birds &amp; Butterflies Wallpaper
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 694</div>
+                    </div>
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture3.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+            
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Horrockses Embellished Printed Duvet Cover - Mckenzi Floral
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 359 - R 379</div>
+                    </div>
+
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture4.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+                    
+                  
+                
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Horrockses - Fringe Scatter Cushion - 45 x 45 - Blush
+                    </div>
+                
+                    <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 149</div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture5.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Lebocode Snow White Fluffy Cushion Cover
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 299</div>
+                    </div>
+
+    
+                </div>
+
+
+                <div class="col col-md-2 hover-scale position-relative" style="cursor: pointer;">
+                    <img src="images/15th picture6.jpg" alt="" width="" height="" class="rounded-2 img-fluid">
+              
+            
+                    <!-- Product information -->
+                    <div class="text-start name text-truncate mt-2">
+                        Pierre Cardin Linen Lifestyle Range - Jacquard Towels - 550gsm - Ruby Maroon
+                    </div>
+            
+                     <!-- Price information -->
+                    <div class="price mt-2">
+                        <div class="text-start discounted-price" style="font-weight: bold;">R 99 - R 279</div>
+                    </div>
+
+    
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- main container closing div -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>

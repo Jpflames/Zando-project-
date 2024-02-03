@@ -1,5 +1,5 @@
 # Zando-project-
 
-godson repository.
+## Information
 
-contains zonda files, upwork files and image for upwork
+This contains files on my design of the Zando project

@@ -1,0 +1,232 @@
+body{
+    background-color: rgb(237, 237, 237);
+}
+.container-fluid{
+    margin-right: 10%;
+}
+
+.navbar-nav{
+    margin-right: 100%;
+   
+
+    
+}
+
+.navbar-nav .nav-link{
+    color: black;
+    font-weight: 600;
+    margin-right: 20px;
+    
+   
+
+}
+
+.navbar-brand{
+    margin-left: 10%;
+    color: black;
+}
+
+.form-control{
+    width: 510px;
+    border: 1px solid rgb(178, 175, 175);
+    margin-left: -18px;
+}
+.btn{
+    background-color: orange;
+    color: #fff;
+}
+
+span{
+    display: flex;
+    gap: 10px;
+}
+span i{
+    font-size: 1.5rem;
+    justify-content: center;
+    margin-top: -5px;
+}
+
+
+/* ============= main content =================== */
+
+
+.main{
+    display: flex;
+    margin-left: 10%;
+    margin-right: auto;
+    margin-top: 10px;
+    padding-right: 10px;
+    
+}
+
+.list-items{
+    background-color: #fff;
+    width: 220px;
+    margin-right: 10px;
+    height: 26rem;
+    border-radius: 8px;
+}
+
+.list-items ul li{
+    list-style: none;
+    padding: 5px;
+}
+
+.list-items ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.list-items ul li a img{
+width: 20px;
+}
+/* =============== carousel ==================== */
+.carousel{
+    height:26rem;
+}
+.carousel-item img{
+    width: 100%;
+    height: 26rem;
+    border-radius: 8px;
+   
+}
+
+/* ============= .gift-box ==================== */
+
+
+.gift-box img{
+    width: 60%;
+    height: 12.6rem;
+    border-radius: 8px;
+
+}
+.gift-box .box1{
+    margin-bottom: 13px;
+}
+
+
+/* =============== cycle-images .carousel ================== */
+.content{
+display: flex;
+}
+
+.round-slider{
+    background: #fff;
+    margin-top:1rem ;
+    margin-left: 10%;
+    margin-right: 17%;
+    border-radius: 8px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-wrapper{
+    
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    border-radius: 50%;
+    display: block;
+    width: 85%;
+    height: 100;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  .swiper-button-prev, .swiper-button-next{
+   
+
+  }
+
+  /* ================== media ================== */
+
+  @media only screen and (max-width: 767px) {
+    /* Adjust styles for screens up to 767px width */
+    .container-fluid {
+        margin-right: 5%;
+    }
+
+    .navbar-nav {
+        margin-right: 0;
+    }
+
+    .navbar-brand {
+        margin-left: 5%;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main {
+        margin-left: 5%;
+        padding-right: 5px;
+    }
+
+    .list-items {
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+    }
+
+    .carousel,
+    .gift-box img,
+    .round-slider {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Adjust styles for screens from 768px to 991px width */
+    .container-fluid {
+        margin-right: 8%;
+    }
+
+    .navbar-brand {
+        margin-left: 8%;
+    }
+
+    .form-control {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .main {
+        margin-left: 8%;
+    }
+
+    .list-items {
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+    }
+
+    .carousel,
+    .gift-box img,
+    .round-slider {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+
+
+
+
+
+
+
+
+

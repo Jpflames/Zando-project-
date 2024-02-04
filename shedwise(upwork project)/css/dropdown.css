@@ -1,0 +1,35 @@
+ul li a {
+    text-decoration: none;
+    color:black;
+    display: block;
+  
+}
+ul li {
+    list-style: none;
+    padding: 10px;
+    t
+}
+.drop-st{
+    margin-top: 20px;
+}
+nav a:hover{
+   background-color:grey; 
+   padding: 10px;
+   border-radius: 7px ;
+   color: white;
+}
+.flex-row{
+    margin: 50px;
+    
+    
+    margin-left: 30%;
+    
+}
+ a:hover {
+text-decoration: none ; 
+}
+.stop{
+    
+   padding: 10px;
+   font-size: large;
+}

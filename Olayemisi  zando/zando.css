@@ -1,0 +1,23 @@
+/* stylling  the container*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+
+
+
+.container{
+    background-color: rgb(230, 236, 236);
+    border-radius: 15px;
+    box-shadow: 5px 5px 7px 5px;
+    
+
+}
+
+/* styling the links */
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+ 
